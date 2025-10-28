@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event- Diamond Model School Alumni Association</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" type="image/png" href="images/dmsaa.png">
+</head>
+<body>
+    <header id="header">
+        <!-- Header will be loaded here by JavaScript -->
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero" style="background-image: linear-gradient(rgba(26,54,93,0.8), rgba(26,54,93,0.8)), url('images/events-hero.jpg');">
+            <div class="container">
+                <div class="about-hero-content">
+                    <h1>Our Events</h1>
+                    <p>Stay updated with our latest programs & gatherings</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Breadcrumb -->
+        <section class="breadcrumb">
+            <div class="container">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                    <a href="events.html" class="active">Events</a>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Events List -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Upcoming Events</h2>
+                    <p>Mark your calendar for these exciting activities</p>
+                </div>
+                <div class="event-list">
+                    <!-- Event Card 1 -->
+                    <div class="event-card">
+                        <div class="event-image" style="background-image: url('images/fellowship.jpg');"></div>
+                        <div class="event-content">
+                            <div class="event-date">October 15, 2025</div>
+                            <h3>Annual Fellowship Gathering</h3>
+                            <p>Join us for an evening of nostalgia, networking, and celebration at our annual fellowship event.</p>
+                            <a href="#" class="btn">Register Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Event Card 2 -->
+                    <div class="event-card">
+                        <div class="event-image" style="background-image: url('images/workshop.jpg');"></div>
+                        <div class="event-content">
+                            <div class="event-date">November 5, 2025</div>
+                            <h3>Study Planning Workshop</h3>
+                            <p>A special workshop to guide Grade 10 students in effective study planning.</p>
+                            <a href="#" class="btn">Register Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Event Card 3 -->
+                    <div class="event-card">
+                        <div class="event-image" style="background-image: url('images/futsal.jpg');"></div>
+                        <div class="event-content">
+                            <div class="event-date">To Be Decided</div>
+                            <h3>Friendly Futsal Match</h3>
+                            <p>A friendly futsal match between Diamond Model School Alumni Association & Rotaract Club of Lekhnath.</p>
+                            <a href="#" class="btn">More Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <!-- Footer will be loaded here by JavaScript -->
+    </footer>
+
+    <script>
+    // Load external HTML into an element
+    function loadHTML(elementId, file) {
+        fetch(file)
+            .then(response => {
+                if (!response.ok) throw new Error("Network response was not ok");
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById(elementId).innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Error loading " + file + ":", error);
+            });
+    }
+
+    // Initialize when DOM is ready
+    document.addEventListener("DOMContentLoaded", () => {
+        loadHTML("header", "header.html");
+        loadHTML("footer", "footer.html");
+    });
+    </script>
+</body>
+</html>
